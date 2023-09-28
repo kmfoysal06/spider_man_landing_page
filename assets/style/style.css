@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Goldman';
+    src: url('../fonts/Goldman-Regular.woff2') format('woff2'),
+        url('../fonts/Goldman-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/Outfit-Thin.woff2') format('woff2'),
+        url('../fonts/Outfit-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Swanky and Moo Moo';
+    src: url('../fonts/SwankyandMooMoo.woff2') format('woff2'),
+        url('../fonts/SwankyandMooMoo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: linear-gradient(111deg, #2E335A 6.45%, #1C1833 92.95%);
+	height: 100vh;
+	overflow: hidden;
+}
+header svg{
+	width: 25px;
+}
+main{
+	height: 90vh;
+	justify-content: center;
+}
+main svg{
+	width: 40px;
+}
+header img{
+	width: 220px;
+}
+main .text-content img{
+	width: 250px;
+}
+main .media-content img{
+	width: 1410px;
+}
+header img.logo{
+	width: 120px;
+}
+header img.profile-img{
+	width: 30px;
+	border-radius: 50%;
+}
+.horiz-line{
+	height: 30px;
+	width: 4px;
+	background: #fff;
+	position: relative;
+	display: block;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header,main{
+	width: 90%;
+	margin: 20px auto;
+}
+header li{
+	list-style: none;
+	transition: 0.4s;
+	font-family: 'Outfit';
+}
+header .header-list{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	color: #fff;
+}
+.row{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100%;
+}
+.row .col.media-content img{
+	width: 60%;
+	position: absolute;
+	bottom: 0;
+}
+.row .col.text-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.action .watch{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background: transparent;
+	border:none;
+	outline: none;
+	font-size: 20px;
+	color: #fff;
+}
+.action .more{
+	border:2px solid #fff;
+	outline: none;
+	background: transparent;
+	border-radius: 30px;
+	padding: 0 15px;
+	color: #fff;
+	font-size: 15px;
+}
+.action {
+	display: flex;
+	gap: 25px;
+	font-family: 'Outfit';
+	margin: 20px 0;
+}
+.text-content h2{
+	font-size: 60px;
+	color: #fff;
+	-webkit-text-stroke:1px #f00;
+	font-weight: 400;
+	font-family: 'Goldman';
+}
+.text-content p{
+	font-size: 20px;
+	color: #fff;
+	font-family: 'Outfit';
+}
+.text-content h3{
+	color: #000;
+	-webkit-text-stroke: .000001px #fff;
+	font-size: 45px;
+	font-family: 'Swanky and Moo Moo';
+
+}
+button ,li{
+	cursor: pointer;
+}
+li > .horiz-line  {
+	cursor: default;
+}
+.header-list li:hover {
+	color: #f00;
+}
+.active{
+	color: #f00;
+}
+.active:hover{
+	color: #fff!important;
+}
+
+@media only screen and (max-width: 760px) {
+  .row{
+	position: relative;
+}
+.row .col{
+	position: absolute;
+}
+.row .media-content{
+	position: relative;
+	left: 100%;
+}
+}
+
+@media only screen and (max-width: 500px) {
+ .row .text-content h2{
+ 	font-size: 38px;
+ }
+}
